@@ -27,8 +27,16 @@ public class Main {
         System.out.println(meanSum / arr3.length);
         System.out.println("--End of task 3--\n");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            if (i != reverseFullName.length -1 - i) {
+                char a = reverseFullName[i];
+                char b = reverseFullName[reverseFullName.length - 1 - i];
+                reverseFullName[i] = b;
+                reverseFullName[reverseFullName.length - 1 - i] = a;
+            }
+        }
+        for (char i : reverseFullName) {
+            System.out.print(i);
         }
         System.out.println("\n--End of task 4--\n");
     }
